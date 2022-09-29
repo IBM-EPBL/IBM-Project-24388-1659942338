@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <body>
+      {% include 'navbar.html' %}
+      <div class="d-flex justify-content-center align-items-center">
+         <div class="card" style="width: 400px;">
+             <div class="card-header text-center">
+                 <h3>User Info</h3>
+             </div>
+             
+             {% if msg %}
+               <div class="alert alert-success">
+                  {{ msg }}
+               </div>
+             {% endif %}
+
+             <div class="card-body" >
+               {% if userData %}
+                  <p><b>Name : </b>{{userData['name']}}</p>
+                  <p><b>Email : </b>{{userData['email']}}</p>
+                  <p><b>Password : </b>{{userData['password']}}</p>
+               {% endif %}
+               <button class="btn btn-danger"><a href = "\" style="color:white;text-decoration:none;">Back to home page</a></button>
+             </div>
+         </div>
+     </div>
+      
+   </body>
+</html>
