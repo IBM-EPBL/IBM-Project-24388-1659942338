@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <form action="{{ url_for('requested')}}" method="post">
+    	<input type="text" name="name" placeholder="Enter Name" required="required" style="color:black" />
+        <input type="email" name="email" placeholder="Enter Email" required="required" style="color:black"/>
+		<input type="text" name="phone" placeholder="Enter 10-digit mobile number" required="required" style="color:black"/>
+		<select name="bloodgrp">
+					  <option value="select" selected>Choose your blood group</option>
+					  <option value="O+">O Positive</option>
+					  <option value="A+">A Positive</option>
+					  <option value="B+">B Positive</option>
+					  <option value="AB+">AB Positive</option>
+					  <option value="O-">O Negative</option>
+					  <option value="A-">A Negative</option>
+					  <option value="B-">B Negative</option>
+					  <option value="AB-">AB Negative</option>
+		</select>
+		<textarea rows="4" placeholder="Enter the address" required="required" style="color:black" name="address"></textarea>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit the request</button>
+
+    </form>
+    <div>
+ {{ pred }}</div>
+    {% endblock %}
+  </body>
+</html>

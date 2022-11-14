@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/logreg.js') }}"></script>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <div class="center">
+      <div>
+        <button id = "Update" class = "update">Update</button>
+      </div>
+      <div>
+        <button id = "Cancel" class = "update" onClick="window.location.reload();">Cancel</button>
+      </div>
+      </div>
+      <form action="/details" method="post">
+      
+        <h1>Personal Details</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Enter Your Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" readonly="readonly" placeholder="Enter Name" value="{{ account['NAME'] }}">
+
+          <label for="uname">Username:</label>
+          <input type="text" id="uname" name="uname" readonly="readonly" value="{{ account['USERNAME'] }}">
+		  
+		  <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" readonly="readonly" placeholder="Enter Email" value="{{ account['EMAIL'] }}">
+		  
+		  <label for="dob">Date of Birth:</label>
+          <input id = "dob" name="dob" type="text" readonly="readonly" onblur="(this.type='text')" onfocus="(this.type = 'date')" placeholder="Date of Birth" value="{{ account['DOB'] }}"">
+          
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" readonly="readonly" placeholder="Enter Age" value="{{ account['AGE'] }}">
+
+          <label for="avail">Availability:</label>
+          <select id="avail" name="avail" value="{{ account['AVAILABILITY'] }}" disabled>
+                <option value=None style="color: black; background-color: #6eff2b">{{ account['AVAILABILITY'] }}</option>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+          </select>
+          
+          <label for="phone">Contact No:</label>
+          <input type="text" id="phone" name="phone" readonly="readonly" value="{{ account['PHONE'] }}" placeholder="Enter Phone Number">
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" readonly="readonly" value="{{ account['CITY'] }}" placeholder="Enter City">
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" readonly="readonly" value="{{ account['STATE'] }}" placeholder="Enter State">
+
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" readonly="readonly" value="{{ account['COUNTRY'] }}" placeholder="Enter Country">
+          
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">2</span>Health Information</legend>
+		  <br></br>
+
+          <label for="bloodtype">Select Blood Type:</label>
+            <select id="bloodtype" name="bloodtype" disabled>
+                <option value=None style="color: black; background-color: #6eff2b">{{ account['BLOODTYPE'] }}</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" readonly="readonly" placeholder="Enter Description">{{ account['DESCRIPTION'] }}</textarea>
+        </fieldset>
+        <fieldset>
+        <label for="photo">Upload Profile Picture:</label>
+        <input type="file" name="photo" id="photo"/>
+
+        <label for="certificate">Upload Covid Certificate:</label>
+        <input type="file" name="certificate" id="certificate"/>
+
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    {% endblock %}
+  </body>
+</html>

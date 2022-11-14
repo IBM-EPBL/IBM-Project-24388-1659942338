@@ -1,0 +1,128 @@
+body {
+    background-color: #F3EBF6;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(https://img.freepik.com/premium-photo/hands-holding-blood-drop-give-blood-donation-blood-transfusion-world-blood-donor-day-world-hemophilia-day-concept_448865-2914.jpg?size=626&ext=jpg&ga=GA1.2.1813890947.1662586000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: auto;
+}
+
+.main {
+    background-color: #FFFFFF;
+    width: auto;
+    max-width: 400px;
+    max-height: 600px;
+    margin-bottom: 10px;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 3em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    padding-top: 30px;
+    color: #fe1d1d;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+width: 76%;
+color: rgb(0, 0, 0);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 20px;
+margin-left: 46px;
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 5px;
+}
+
+.pass {
+    width: 76%;
+    color: rgb(41, 44, 45);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 20px;
+    margin-left: 46px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #8a2323, #fe1d1d);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #fe1d1d;
+    font-family: sans-serif;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #fe1d1d;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+    
+}
+
+.msg{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #f3aeae;
+    border: 1px solid #8a2323;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: small;
+    font-weight: bold;
+}
