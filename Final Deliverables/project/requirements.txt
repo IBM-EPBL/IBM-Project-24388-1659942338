@@ -1,0 +1,4 @@
+flask~=2.2.2
+ibm-db
+python-dotenv~=0.21.0
+sendgrid~=6.9.7
